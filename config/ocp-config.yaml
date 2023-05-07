@@ -1,0 +1,15 @@
+global_config:
+  environment_name: demo
+  cloud_platform: existing-ocp
+  env_id: mlops
+  universal_password: CP4DDataFabric
+
+openshift:
+- name: cpd-demo
+  ocp_version: '4.10'
+  cluster_name: cpd-mlops
+  domain_name: example.com
+  console_banner: "Environment {{ env_id }}"
+  openshift_storage:
+  - storage_name: auto-storage
+    storage_type: auto
